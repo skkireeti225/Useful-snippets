@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="http://underscorejs.org/underscore-min.js"></script>
+
+<style>
+
+
+</style>
+
+
+<script>
+
+// common methods we need to know
+
+var myArray = ["one", "two", "three", "four", "five"];
+var myArray2 = [1, 2, 3, 4, 5];
+var myArray3 = [1, 5, 2, 2, 8, 5, 3, 8, 9, 0];
+
+var index = _.indexOf(myArray, "three")
+var union = _.union(myArray2, myArray3)
+var uniq = _.uniq(myArray3)
+var zip = _.zip(myArray, myArray2)
+var newArr = _.map(myArray2, function (item) {
+    return item * 2;
+});
+var ID_TO_FIND = 17;
+var data = [{
+    "id": 100,
+    "title": "Tlt1",
+    "tax": [{
+        "name": "Tax1",
+        "id": 15
+     }, {
+        "name": "Tax1",
+        "id": 17
+    }]
+}, {
+    "id": 101,
+        "title": "Tlt2",
+        "tax": [{
+        "name": "Tax2",
+            "id": 16
+    }]
+}, {
+    "id": 102,
+        "title": "Tlt3",
+        "tax": [{
+        "name": "Tax3",
+            "id": 17
+    }, {
+        "name": "Tax3",
+            "id": 18
+    }]
+}];
+
+var arr = _.filter(data, function(obj) {
+    return _.where(obj.tax, {id: ID_TO_FIND}).length > 0;
+})
+//console.log(arr);
+
+
+
+var data1 =[
+        {
+            "services": [
+                {
+                    "service_uuid": "41152",
+                    "service_name": "DNS"
+                }
+            ],
+            "service_category_name": "net-admin",
+            "service_category_uuid": "4288"
+        },
+        {
+            "services": [
+                {
+                    "service_uuid": "41152",
+                    "service_name": "DNS"
+                }
+            ],
+            "service_category_name": "naming-services",
+            "service_category_uuid": "69640"
+        },
+        {
+            "services": [
+                {
+                    "service_uuid": "40964312",
+                    "service_name": "secure-http"
+                }
+            ],
+            "service_category_name": "internet-privacy",
+            "service_category_uuid": "40968408"
+        },
+        {
+            "services": [
+                {
+                    "service_uuid": "200768",
+                    "service_name": "secure-imap"
+                }
+            ],
+            "service_category_name": "email",
+            "service_category_uuid": "41214160"
+        },
+        {
+            "services": [
+                {
+                    "service_uuid": "8208",
+                    "service_name": "HTTP"
+                }
+            ],
+            "service_category_name": "browsing",
+            "service_category_uuid": "40972504"
+        }
+    ];
+var name = "browsing";
+
+var elem = _.findWhere(data1,{
+service_category_name:name
+});
+
+console.log(elem);
+
+
+
+
+
+
+
+// console.log(newArr);
+// console.log(_);
+
+
+</script>
+</head>
+<body>
+
+</body>
+</html>
