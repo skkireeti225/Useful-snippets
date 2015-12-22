@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+  <script src="http://code.highcharts.com/highcharts.js"></script>
+  <script>
+  $(function() {
+      var chart = new Highcharts.Chart({
+
+          chart: {
+              renderTo: 'container',
+              type: 'column'
+          },
+          credits: {
+           enabled: false
+       },
+          title: {
+         text: "Chart Info 1 "
+          },
+          yAxis: {
+              title: {
+                  text: 'x axis info',
+                  useHTML: true,
+                  style: {
+                      "-webkit-transform": "rotate(90deg)",
+                      "-moz-transform": "rotate(90deg)",
+                      "-o-transform": "rotate(90deg)"
+                  }
+              }
+          },
+          plotOptions: {
+        series: {
+            cursor: 'pointer',
+            name: 'chart details',
+          }
+    },
+          series: [{
+              data: [23,45,12,89,123,12,5]}]
+
+      });
+      var chart2 = new Highcharts.Chart({
+
+          chart: {
+              renderTo: 'container2',
+              type: 'column'
+          },
+          credits: {
+           enabled: false
+       },
+          title: {
+         text: "Chart Info 2"
+          },
+          yAxis: {
+              title: {
+                  text: 'x axis info',
+                  useHTML: true,
+                  style: {
+                    "-webkit-transform": "rotate(90deg)",
+                    "-moz-transform": "rotate(90deg)",
+                    "-o-transform": "rotate(90deg)"
+
+                  }
+              }
+          },
+          plotOptions: {
+        series: {
+            cursor: 'pointer',
+            name: 'chart details',
+          }
+    },
+          series: [{
+              data: [52,14,81,48,51,71,65]}]
+
+      });
+
+  var chart3 = new Highcharts.Chart({
+
+      chart: {
+          renderTo: 'container3',
+          type: 'column'
+      },
+      credits: {
+           enabled: false
+       },
+      title: {
+     text: "Chart Info 3"
+      },
+      yAxis: {
+          title: {
+              text: 'x axis info',
+              useHTML: true,
+              style: {
+                "-webkit-transform": "rotate(90deg)",
+                "-moz-transform": "rotate(90deg)",
+                "-o-transform": "rotate(90deg)"
+
+              }
+          }
+      },
+      plotOptions: {
+    series: {
+        cursor: 'pointer',
+        name: 'chart details',
+      }
+},
+      series: [{
+          data: [26,95,121,93,13,52,15]}]
+
+  });
+
+var chart4 = new Highcharts.Chart({
+
+    chart: {
+        renderTo: 'container4',
+        type: 'column'
+    },
+    credits: {
+           enabled: false
+       },
+    title: {
+   text: "Chart Info 4"
+    },
+    yAxis: {
+        title: {
+            text: ' x axis info',
+            useHTML: true,
+            style: {
+              "-webkit-transform": "rotate(90deg)",
+              "-moz-transform": "rotate(90deg)",
+              "-o-transform": "rotate(90deg)"
+
+            }
+        }
+    },
+    plotOptions: {
+  series: {
+      cursor: 'pointer',
+      name: 'chart details',
+    }
+},
+    series: [{
+        data: [94,25,50,89,121,52,56]}]
+
+});
+});
+  </script>
+  <style>
+  /*.carousel-inner > .item > img,
+  .carousel-inner > .item > a > img {
+      width: 70%;
+      margin: auto;
+  }*/
+
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <br>
+  <div id="myCarousel" class="carousel slide" data-ride="carousel">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="1"></li>
+      <li data-target="#myCarousel" data-slide-to="2"></li>
+      <li data-target="#myCarousel" data-slide-to="3"></li>
+    </ol>
+
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner" role="listbox">
+      <div class="item active">
+        <div id="container" style="height: 300px;width:1140px"></div>
+      </div>
+
+      <div class="item">
+        <div id="container2" style="height: 300px;width:1140px"></div>
+      </div>
+
+      <div class="item">
+        <div id="container3" style="height: 300px;width:1140px"></div>
+      </div>
+
+      <div class="item">
+      <div id="container4" style="height: 300px;width:1140px"></div>
+      </div>
+    </div>
+
+    <!-- Left and right controls -->
+    <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+</div>
+
+</body>
+</html>
